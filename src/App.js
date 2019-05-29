@@ -15,7 +15,7 @@ const headerController = (() => {
 
   // the api we will expose to our clients; a setter (used by the non-header-components) and the handlers (used by the header)
   const api = {
-    setEventHandler(name, fn) {
+    setHeaderHandler(name, fn) {
       if (!fn || fn.length < 1) {
         throw new TypeError(
           "An event handler needs to be supplied: function(event) {...}"
@@ -87,13 +87,13 @@ function Header({ controls: c }) {
 class Bar extends React.PureComponent {
   constructor(props) {
     super(props);
-    const { setEventHandler } = props.controls;
+    const { setHeaderHandler } = props.controls;
 
-    setEventHandler("handleButtonClick", event => {
+    setHeaderHandler("handleButtonClick", event => {
       alert("This is Barta!");
       event.preventDefault();
     });
-    setEventHandler("handleInputFocus", event => {
+    setHeaderHandler("handleInputFocus", event => {
       event.preventDefault();
     });
   }
@@ -106,9 +106,9 @@ class Bar extends React.PureComponent {
 let size = 10;
 let addToggle = true;
 function Foo(props) {
-  const { setEventHandler } = props.controls;
+  const { setHeaderHandler } = props.controls;
 
-  setEventHandler("handleInputFocus", event => {
+  setHeaderHandler("handleInputFocus", event => {
     const inputField = event.target;
     inputField.value = "A Fooz pedal!";
     inputField.style.border = "dashed 3px green";
