@@ -111,6 +111,7 @@ function Foo(props) {
   setEventHandler("handleInputFocus", event => {
     const inputField = event.target;
     inputField.value = "A Fooz pedal!";
+    inputField.style.border = "dashed 3px green";
 
     // increase the font size on every event
     const makeBig = e => {
