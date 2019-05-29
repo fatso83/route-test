@@ -1,6 +1,6 @@
 # Demo: shared header component
 
-To avoid flickering when going from one screen to another in a single-page app, it is useful to try and keep as much of the DOM intact as possible, basically common hierarcies, especially if a sub-tree is moderately expensive to render. One such example could be a `<Header>` component in an app: shared by many, but is on the outside of each screen for performance.
+To avoid flickering when going from one screen to another in a single-page app, it is useful to try and keep as much of the DOM intact as possible, basically common hierarcies, especially if a sub-tree is moderately expensive to render. One such example could be a `<Header>` component in an app: shared by many, but is on the outside of each screen for performance. [Stack overflow question on this topic](https://stackoverflow.com/q/47196930/200987).
 
 There are two issues that is interesting to ponder:
 1. How can we dynamically update the header along with the screen component - which is rendered elsewhere?
