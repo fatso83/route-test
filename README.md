@@ -9,4 +9,4 @@ There are two issues that is interesting to ponder:
 This demo tries to answer how to do both of these things. The first issue is basically solved using React Router: by having a router section in the header as well as in the screen component, we can update them both in sync with changes in the url. The problem of event handlers involves a bit more thinking, but is quite easy to solve in practice: we pass an object into both DOM hierarcies and mutate it to set new event handlers. The interface of such a shared object could be as simple as props we set a la `obj.myHandler = fooMyHandler`, but in our demo we have been a bit more fancy, ensuring the event handler name is recognized and that it actually expects an event as the parameter.
 
 ## Try it out
-`npm start`
+Check out [the running demo](https://fatso83.github.io/shared-header-solution/) or `npm start`
